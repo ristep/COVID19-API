@@ -1,0 +1,2 @@
+# serve files and dirs if they exist please, otherwise send to index
+RewriteRule  ^(.*)$ index.php
