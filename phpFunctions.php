@@ -24,7 +24,13 @@ function getWorldTotal($inp, $conn, $tokenData)
     sum(`new_cases`) `new_cases`,
     sum(`active_cases`) `critical_cases`,
     max(`statistic_taken_at`) `statistic_taken_at`
-FROM `cases_by_country` WHERE `cases_by_country`.`country_name`!='World'
+FROM `cases_by_country` WHERE 
+		`cases_by_country`.`country_name`!='World' and 
+		`cases_by_country`.`code3`!= 'EUR' and
+		`cases_by_country`.`code3`!= 'ASI' and 
+		`cases_by_country`.`code3`!= 'SAM' and
+		`cases_by_country`.`code3`!= 'AFR'
+
 ");
 	
 	// $sth->bindParam('userId', $inp->userId);
