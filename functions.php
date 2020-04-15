@@ -206,3 +206,25 @@ function build_sql($input){
 	};
 	return $sql;
 };
+
+
+// rss feed zdravstvo
+function ParseV2 ($url) {
+	$fileContents= file_get_contents($url);
+	$fileContents = str_replace(array("\n", "\r", "\t"), '', $fileContents);
+	$fileContents = trim(str_replace('"', "'", $fileContents));
+	$simpleXml = simplexml_load_string($fileContents);
+	return $simpleXml;
+}
+function limit_text($text, $limit) {
+	if (str_word_count($text, 0) > $limit) {
+			$words = str_word_count($text, 2);
+			$pos = array_keys($words);
+			$text = substr($text, 0, $pos[$limit]) . '<br>[...]';
+	}
+	return $text;
+}
+
+function Parse($url){
+	return simplexml_load_file($url, "SimpleXMLElement", LIBXML_NOCDATA);
+}

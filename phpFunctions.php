@@ -227,24 +227,20 @@ function changePassword($inp, $conn, $tokenData)
 	return $ret;
 }
 
-
-// rss feed zdravstvo
-function ParseV2 ($url) {
-	$fileContents= file_get_contents($url);
-	$fileContents = str_replace(array("\n", "\r", "\t"), '', $fileContents);
-	$fileContents = trim(str_replace('"', "'", $fileContents));
-	$simpleXml = simplexml_load_string($fileContents);
-	return $simpleXml;
-}
-
-function Parse($url){
-	return simplexml_load_file($url, "SimpleXMLElement", LIBXML_NOCDATA);
-}
-
-function getZdravstvoRSS() {
+function getZdravstvoRSS($inp, $conn, $tokenData) {
 		return Parse ('http://zdravstvo.gov.mk/feed/');
 }
 
+
+function getWHOnewsRSS($inp, $conn, $tokenData) {
+	$ret = Parse('https://www.who.int/rss-feeds/news-english.xml');
+	
+	foreach ($ret->channel->item as $key => $value){
+	 	$value->description = limit_text($value->description, 25);
+	} 
+
+	return $ret;
+}
 // $xml = simplexml_load_string($feed);
 // return ($xml);
 
