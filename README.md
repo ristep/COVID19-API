@@ -2,7 +2,7 @@
 
 Caching data base and API for my reactjs application [COVID-19-monitor](https://github.com/ristep/COVID-19-monitor)
 
-Several public API is used as data sources:
+Several public API are used as data sources:
 
 [Coronavirus monitor API](https://rapidapi.com/astsiatsko/api/coronavirus-monitor/)
 
