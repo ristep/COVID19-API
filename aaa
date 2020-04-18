@@ -1,0 +1,34 @@
+IMPORTANT NOTES:                                                                                
+ - The following errors were reported by the server:                                            
+                                                                                                
+   Domain: www.smanzary.sman.cloud                                                              
+   Type:   None                                                                                 
+   Detail: DNS problem: NXDOMAIN looking up A for                                               
+   www.smanzary.sman.cloud - check that a DNS record exists for this                            
+   domain                                                                                       
+                                                                                                 
+   Domain: mano.uk.to                                                                           
+   Type:   None                                                                                 
+   Detail: DNS problem: NXDOMAIN looking up A for mano.uk.to - check                            
+   that a DNS record exists for this domain                                                     
+                                                                                                
+   Domain: capirp.us.to                                                                         
+   Type:   None                                                                                 
+   Detail: DNS problem: NXDOMAIN looking up A for capirp.us.to - check                          
+   that a DNS record exists for this domain                                                     
+                                                                                                
+   Domain: man.zary.cloud                                                                       
+   Type:   None                                                                                 
+   Detail: DNS problem: NXDOMAIN looking up A for man.zary.cloud -                              
+   check that a DNS record exists for this domain                                               
+                                                                                                
+   Domain: mail.zary.cloud                                                                      
+   Type:   None                                                                                 
+   Detail: DNS problem: NXDOMAIN looking up A for mail.zary.cloud -                             
+   check that a DNS record exists for this domain                                               
+                                                                                                
+   Domain: www.react.sman.cloud                                                                 
+   Type:   None                                                                                 
+   Detail: DNS problem: NXDOMAIN looking up A for www.react.sman.cloud                          
+   - check that a DNS record exists for this domain                                             
+riste@rparuba ~>                                                                                
